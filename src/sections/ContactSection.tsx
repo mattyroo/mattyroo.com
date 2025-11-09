@@ -12,7 +12,7 @@ export function ContactSection() {
           transition={{ type: 'spring', stiffness: 110, damping: 18 }}
         >
           <motion.a
-            href="src/assets/Matthew%20Garrity-5.pdf"
+            href="/Matthew%20Garrity-5.pdf"
             className="button button--primary"
             whileHover={{ scale: 1.03, y: -2 }}
             whileTap={{ scale: 0.98 }}
