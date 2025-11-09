@@ -122,7 +122,7 @@ export function HeroSection() {
             Explore recent impact
           </motion.a>
           <motion.a
-            href="mailto:hello@mattyroo.com"
+            href="mailto:matthewrgarrity@gmail.com"
             className="button button--ghost"
             variants={heroVariants}
             custom={1}
