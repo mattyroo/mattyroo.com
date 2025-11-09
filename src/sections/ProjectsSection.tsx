@@ -19,7 +19,7 @@ const projects = [
       'Media discovery experience powered by the TMDB API, featuring advanced search, smart watchlists, and curated recommendations for films and TV.',
     role: 'Frontend Engineer',
     tags: ['React', 'TypeScript', 'TMDB API', 'State management'],
-    url: 'https://tmdb.mattyroo.com',
+    url: 'https://media.mattyroo.com',
   },
   {
     title: 'Custom CMS platform',
