@@ -2,24 +2,24 @@ import { motion } from 'framer-motion'
 
 const projects = [
   {
-    title: 'Neon Flow Dashboard',
+    title: 'Saas Dashboard',
     sector: 'Personal project',
     year: '2025',
     description:
       'A vaporwave-inspired SaaS dashboard concept exploring motion-driven status indicators, live metrics, and personalized onboarding flows.',
     role: 'Product Designer · Frontend Engineer',
     tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Design systems'],
-    url: 'https://example.com/neon-flow',
+    url: 'https://neonforge.mattyroo.com',
   },
   {
-    title: 'CineScope Explorer',
+    title: 'Media Explorer',
     sector: 'Personal project',
     year: '2024',
     description:
       'Media discovery experience powered by the TMDB API, featuring advanced search, smart watchlists, and curated recommendations for films and TV.',
     role: 'Frontend Engineer',
     tags: ['React', 'TypeScript', 'TMDB API', 'State management'],
-    url: 'https://example.com/cinescope',
+    url: 'https://tmdb.mattyroo.com',
   },
   {
     title: 'Custom CMS platform',
