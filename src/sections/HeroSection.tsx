@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import type { CSSProperties } from 'react'
 import {
   SiCss3,
   SiHtml5,
@@ -31,42 +32,49 @@ const techStack = [
     Icon: SiReact,
     accent: '#61dafb',
     backdrop: 'rgba(97, 218, 251, 0.16)',
+    glow: 'rgba(97, 218, 251, 0.55)',
   },
   {
     name: 'TypeScript',
     Icon: SiTypescript,
     accent: '#3178c6',
     backdrop: 'rgba(49, 120, 198, 0.16)',
+    glow: 'rgba(49, 120, 198, 0.5)',
   },
   {
     name: 'Next.js',
     Icon: SiNextdotjs,
     accent: '#ffffff',
     backdrop: 'rgba(255, 255, 255, 0.12)',
+    glow: 'rgba(255, 255, 255, 0.45)',
   },
   {
     name: 'HTML5',
     Icon: SiHtml5,
     accent: '#f16529',
     backdrop: 'rgba(241, 101, 41, 0.16)',
+    glow: 'rgba(241, 101, 41, 0.45)',
   },
   {
     name: 'CSS3',
     Icon: SiCss3,
     accent: '#264de4',
     backdrop: 'rgba(38, 77, 228, 0.16)',
+    glow: 'rgba(38, 77, 228, 0.45)',
   },
   {
     name: 'Tailwind CSS',
     Icon: SiTailwindcss,
     accent: '#38bdf8',
     backdrop: 'rgba(56, 189, 248, 0.16)',
+    glow: 'rgba(56, 189, 248, 0.5)',
   },
   {
     name: 'Node.js',
     Icon: SiNodedotjs,
     accent: '#68a063',
     backdrop: 'rgba(104, 160, 99, 0.16)',
+    glow: 'rgba(104, 160, 99, 0.5)',
   },
 ]
 
@@ -172,6 +180,13 @@ export function HeroSection() {
                   custom={index}
                   aria-label={tech.name}
                   tabIndex={0}
+                  style={
+                    {
+                      '--tech-accent': tech.accent,
+                      '--tech-backdrop': tech.backdrop,
+                      '--tech-glow': tech.glow,
+                    } as CSSProperties
+                  }
                 >
                   <span
                     className="tech-pill__icon"
