@@ -120,7 +120,7 @@ export function ProjectsSection() {
                   className="link"
                   whileHover={{ x: 4 }}
                 >
-                  Read the experience overview
+                  Project Details
                 </motion.a>
                 {project.githubUrl && (
                   <motion.a
