@@ -1,6 +1,17 @@
 import { motion } from 'framer-motion'
 
-const projects = [
+type Project = {
+  title: string
+  sector: string
+  year: string
+  description: string
+  role: string
+  tags: string[]
+  url: string
+  githubUrl?: string
+}
+
+const projects: Project[] = [
   {
     title: 'Saas Dashboard',
     sector: 'Personal project',
@@ -10,6 +21,7 @@ const projects = [
     role: 'Product Designer · Frontend Engineer',
     tags: ['React', 'Framer Motion', 'Tailwind CSS', 'Design systems'],
     url: 'https://neonforge.mattyroo.com',
+    githubUrl: 'https://github.com/mattyroo/neonforge',
   },
   {
     title: 'Media Explorer',
@@ -20,6 +32,7 @@ const projects = [
     role: 'Frontend Engineer',
     tags: ['React', 'TypeScript', 'TMDB API', 'State management'],
     url: 'https://media.mattyroo.com',
+    githubUrl: 'https://github.com/mattyroo/TMDB-Dashboard',
   },
   {
     title: 'Custom CMS platform',
@@ -101,13 +114,24 @@ export function ProjectsSection() {
             <p>{project.description}</p>
             <div className="project-card__bottom">
               <span>{project.role}</span>
-              <motion.a
-                href={project.url}
-                className="link"
-                whileHover={{ x: 4 }}
-              >
-                Read the experience overview
-              </motion.a>
+              <div className="project-card__links">
+                <motion.a
+                  href={project.url}
+                  className="link"
+                  whileHover={{ x: 4 }}
+                >
+                  Read the experience overview
+                </motion.a>
+                {project.githubUrl && (
+                  <motion.a
+                    href={project.githubUrl}
+                    className="link"
+                    whileHover={{ x: 4 }}
+                  >
+                    View on GitHub
+                  </motion.a>
+                )}
+              </div>
             </div>
             <ul className="project-card__tags">
               {project.tags.map((tag) => (
