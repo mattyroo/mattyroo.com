@@ -344,6 +344,51 @@
   box-shadow: 0 14px 36px rgba(12, 16, 24, 0.5);
 }
 
+.tech-pill:focus-visible {
+  outline: 2px solid rgba(124, 92, 255, 0.65);
+  outline-offset: 4px;
+  transform: rotate(5deg) translateY(-4px);
+  border-color: rgba(124, 92, 255, 0.5);
+  box-shadow: 0 14px 36px rgba(12, 16, 24, 0.5);
+}
+
+.tech-pill__tooltip {
+  position: absolute;
+  left: 50%;
+  bottom: -40px;
+  transform: translate(-50%, 8px);
+  padding: 0.35rem 0.7rem;
+  border-radius: 10px;
+  background: rgba(10, 14, 22, 0.95);
+  color: rgba(235, 236, 255, 0.85);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  box-shadow: 0 12px 30px rgba(8, 12, 20, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.tech-pill__tooltip::after {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: rgba(10, 14, 22, 0.95);
+  border-radius: 3px;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.tech-pill:hover .tech-pill__tooltip,
+.tech-pill:focus-visible .tech-pill__tooltip {
+  opacity: 1;
+  transform: translate(-50%, -2px);
+}
+
 .tech-pill__icon {
   width: 46px;
   height: 46px;

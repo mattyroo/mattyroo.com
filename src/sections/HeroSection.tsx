@@ -171,6 +171,7 @@ export function HeroSection() {
                   variants={techVariants}
                   custom={index}
                   aria-label={tech.name}
+                  tabIndex={0}
                 >
                   <span
                     className="tech-pill__icon"
@@ -184,6 +185,9 @@ export function HeroSection() {
                     <tech.Icon />
                   </span>
                   <span className="sr-only">{tech.name}</span>
+                  <span className="tech-pill__tooltip" aria-hidden>
+                    {tech.name}
+                  </span>
                 </motion.li>
               ))}
             </motion.ul>
