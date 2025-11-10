@@ -26,7 +26,7 @@ const projects: Project[] = [
   {
     title: 'Media Explorer',
     sector: 'Personal project',
-    year: '2024',
+    year: '2025',
     description:
       'Media discovery experience powered by the TMDB API, featuring advanced search, smart watchlists, and curated recommendations for films and TV.',
     role: 'Frontend Engineer',
